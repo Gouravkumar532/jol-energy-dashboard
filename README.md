@@ -21,25 +21,29 @@ You must have Python installed and a local instance of PostgreSQL running on por
 Open your terminal and install the required Python libraries:
 ```bash
 pip install streamlit pandas psycopg2 plotly faker
+```
 
 3. Generate the Datasets
 Run the data generation script to create localized supply chain data (Suppliers, Buyers, and Collection Hubs in South India):
 
-Bash
+```bash
 python generate_data.py
+```
 
 4. Setup the Database
 Execute the database script. This will automatically create the required tables in PostgreSQL and perform a bulk insert of the generated CSV data for optimized performance:
 
-Bash
+```bash
 python setup_database.py
-
+```
 5. Launch the Dashboard
 Start the Streamlit server to view the live interactive UI:
 
-Bash
+```bash
 streamlit run app.py
-
+```
 or you can use ->
 
+```bash
 python -m streamlit run app.py
+```
