@@ -3,13 +3,7 @@ import psycopg2.extras # Importing extras for bulk insertion
 import pandas as pd
 
 try:
-    connection = psycopg2.connect(
-        host="localhost",
-        database="jol_energy_db",
-        user="postgres",
-        password="0712", 
-        port="5432"
-    )
+    connection = psycopg2.connect("postgresql://neondb_owner:npg_eimHZL0Baq2t@ep-wandering-surf-ao8m3u22.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require")
     cursor = connection.cursor()
     print("Database connection successful! Starting bulk insert...")
 

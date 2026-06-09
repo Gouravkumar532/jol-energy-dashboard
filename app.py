@@ -14,12 +14,13 @@ st.write("---")
 @st.cache_data(ttl=600) # Caches the data for 10 minutes so the app stays lightning fast
 def load_data():
     try:
+        # Read credentials securely from Streamlit Cloud Secrets
         connection = psycopg2.connect(
-            host="localhost",
-            database="jol_energy_db",
-            user="postgres",
-            password="0712",
-            port="5432"
+            host=st.secrets["db_host"],
+            database=st.secrets["db_name"],
+            user=st.secrets["db_user"],
+            password=st.secrets["db_password"],
+            port=st.secrets["db_port"]
         )
         
         # Pull data directly from your PostgreSQL tables
