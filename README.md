@@ -47,3 +47,6 @@ or you can use ->
 ```bash
 python -m streamlit run app.py
 ```
+
+🔗 **Live Production Deployment:** [jol-energy.streamlit.app](https://jol-energy-dashboard-4vqdpu7nstakvyrxk4sxea.streamlit.app/)  
+🖥️ **Tech Stack:** Python (Streamlit), PostgreSQL (Neon Cloud), Plotly, Git
