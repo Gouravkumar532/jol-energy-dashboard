@@ -116,7 +116,18 @@ with right_col:
     fig_buy = px.funnel(buy_counts, x='Count', y='Status', title="Buyer Procurement Conversion")
     st.plotly_chart(fig_buy, use_container_width=True)
 
+# ==========================================
+# 5.5 Geographic Collection Network Map
+# ==========================================
 st.write("---")
+st.header("🗺️ 3. Geographic Collection Network")
+st.markdown("Live plot of designated battery collection hubs across South India.")
+
+# Streamlit's built-in map automatically looks for 'latitude' and 'longitude' columns in your dataframe
+if not df_collection.empty:
+    st.map(df_collection, zoom=5, use_container_width=True)
+else:
+    st.warning("No collection point data available to map.")
 
 # 6. Live Database Feeds (Tabbed View)
 st.write("---")
